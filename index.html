@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Գյումրու Երիտասարդական Թատերախումբ</title>
+</head>
+
+<body>
+  <header class="container">
+    <a href=""><img src="images/Logo1.jpg" width="50px" height="50px" alt=""></a>
+  
+    <div class="menu-icon" onclick="toggleMenu()">
+      &#9776;
+    </div>
+  
+    <nav id="nav-menu">
+      <ul>
+       
+        <li><a href="">Գլխավոր</a></li>
+        <li><a href="">Մեր մասին</a></li>
+        <li><a href="#presentation">Ընթացիկ Ներկայացումներ</a></li>
+        <li><a href="">Կապ</a></li>
+      </ul>
+    </nav>
+  
+    <div class="language">
+      <select id="language-select" onchange="changeLanguage(this.value)">
+        <option value="hy">Հայ</option>
+        <option value="ru">Рус</option>
+        <option value="en">Eng</option>
+      </select>
+    </div>
+  </header>
+  <div class="container">
+    <h1 class="title">Գյումրու Երիտասարդական Թատերախումբ</h1>
+  </div>
+  <!-- porc -->
+  <div id="main">
+    <img style="z-index: 1;" src="images/group_foto.jpg" id="img1" alt="Foto" />
+    <img src="images/group1.jpg" id="img2" alt="Foto" />
+    <img src="images/IMG_4925.jpg" id="img3" alt="Foto" />
+    <img src="images/IMG_4976.jpg" id="img4" alt="Foto" />
+    <img src="images/5204418048629535091.jpg" id="img5" alt="Foto" />
+    <div id="hovers"></div>
+    <div id="dots"></div>
+  </div>
+  <!-- porc -->
+
+
+
+  <section class="shows container" id="presentation">
+    <h2>Ընթացիկ Ներկայացումներ</h2>
+    <div class="show-cards" id="showCards"></div>
+  </section>
+  <div class="modal" id="modal">
+    <div class="info" id="info">
+
+    </div>
+  </div>
+ 
+
+  <script src="script.js"></script>
+</body>
+
+</html>
