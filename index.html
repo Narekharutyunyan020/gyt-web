@@ -24,7 +24,7 @@
       <ul>
        
         <li><a href="">Գլխավոր</a></li>
-        <li><a href="">Մեր մասին</a></li>
+        <li><a href="#about">Մեր մասին</a></li>
         <li><a href="#presentation">Ընթացիկ Ներկայացումներ</a></li>
         <li><a href="">Կապ</a></li>
       </ul>
@@ -64,6 +64,33 @@
 
     </div>
   </div>
+  <section class="about container" id="about">
+    <h2>Մեր մասին</h2>
+    <p>
+      Գյումրու Երիտասարդական Թատերախումբը հիմնադրվել է երիտասարդ դերասանների կողմից՝ նպատակ ունենալով ներկայացնել ժամանակակից և դասական թատրոնը նորովի:
+      Մենք հավատում ենք, որ թատրոնը ոչ միայն արվեստ է, այլև երկխոսություն հասարակության հետ՝ համարձակ, հոգեհուզական ու իմաստավոր:
+    </p>
+    <button onclick="toggleDetails()">Իմանալ Ավելին</button>
+  </section>
+  
+  <!-- Մոդալ պատուհան -->
+  <div id="aboutModal" class="amodal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleDetails()">&times;</span>
+      <h3>Մեր մասին՝ մանրամասն</h3>
+      <img src="images/group_foto.jpg" alt="" class="aboutFoto" width="400px" height="400px">
+      <img src="images/group_foto.jpg" alt="" class="aboutFoto" width="400px" height="400px">
+      <img src="images/group_foto.jpg" alt="" class="aboutFoto" width="400px" height="400px">
+      <img src="images/group_foto.jpg" alt="" class="aboutFoto" width="400px" height="400px">
+      <img src="images/group_foto.jpg" alt="" class="aboutFoto" width="400px" height="400px">
+    
+      <p>
+        Այստեղ դու կարող ես գրել ավելի խորը ինֆորմացիա թատերախմբի պատմության, գործունեության, թիմի անդամների, ներկայացումների մասին և այլն։<br><br>
+        Սա ընդամենը սկիզբն է։ Կարող ենք ավելացնել նկարներ, վիդեոներ, even սլայդեր՝ ըստ ցանկության։
+      </p>
+    </div>
+  </div>
+  
  
 
   <script src="script.js"></script>

@@ -29,7 +29,7 @@ const presentations = [
         schedule: "Ամեն ուրբաթ, ժ. 19:00"
     },
     {
-        title: "ՌԻչարդ",
+        title: "Ռիչարդ",
         image: "images/richard.jpg",
         director: "ԱՆԱՀԻՏ ՂԱԶԱՐՅԱՆԻ",
         cast: "ԱՐՄԵՆ ԱՐՇԱԼՈւՅՍՅԱՆ",
@@ -141,3 +141,17 @@ const closeModal = () => {
     var menu = document.getElementById('nav-menu');
     menu.classList.toggle('active');
   }
+
+  function toggleDetails() {
+    const modal = document.getElementById('aboutModal');
+    modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
+  }
+
+  // Բաց տարածք սեղմելիս մոդալը փակելու համար
+  window.onclick = function(event) {
+    const modal = document.getElementById('aboutModal');
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+
