@@ -1,3 +1,11 @@
+const showCards = document.getElementById("showCards")
+const hovers = document.getElementById("hovers");
+const dots = document.getElementById("dots");
+const dotsClass = document.getElementsByClassName("dot");
+const spectacls = document.getElementById("spectalc")
+const modal = document.getElementById("modal")
+const info = document.getElementById("info")
+
 const images = ["images/group_foto.jpg",
     "images/group1.jpeg",
     "images/IMG_4925.jpg",
@@ -53,14 +61,6 @@ const presentations = [
     },
 
 ];
-
-const showCards = document.getElementById("showCards")
-const hovers = document.getElementById("hovers");
-const dots = document.getElementById("dots");
-const dotsClass = document.getElementsByClassName("dot");
-const spectacls = document.getElementById("spectalc")
-const modal = document.getElementById("modal")
-const info = document.getElementById("info")
 
 showCards.innerHTML = presentations.map((el, i) => `<button class="show-card" onclick="openModal(${i})">
         <img src="${el.image}" alt="Ներկայացում 1">
