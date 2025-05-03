@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><link rel="preconnect" href="https://fonts.googleapis.com">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,22 +18,22 @@
 <body>
   <header>
     <a href=""><img src="images/Logo1.jpg" width="50px" height="50px" alt=""></a>
-  
+
     <div class="menu-icon" onclick="toggleMenu()">
       &#9776;
     </div>
-  
+
     <nav id="nav-menu">
       <ul>
-       
+
         <li><a href="">Գլխավոր</a></li>
         <li><a href="#about">Մեր մասին</a></li>
         <li><a href="#presentation">Ընթացիկ Ներկայացումներ</a></li>
-        <li><a href="#actors">Դերասաններ</a></li> 
+        <li><a href="#actors">Դերասաններ</a></li>
         <li><a href="#contact">Կապ</a></li>
       </ul>
     </nav>
-  
+
     <div class="language">
       <select id="language-select" onchange="changeLanguage(this.value)">
         <option value="hy">Հայ</option>
@@ -53,7 +54,7 @@
     <img src="images/5204418048629535091.jpg" id="img5" alt="Foto" />
     <div id="hovers"></div>
     <div id="dots"></div>
-  </div>
+  </div>b
   <!-- porc -->
 
 
@@ -67,18 +68,23 @@
 
     </div>
   </div>
-  <section class="about container" id="about">
-    <h2>Մեր մասին</h2>
-    <p>
-      Գյումրու Երիտասարդական Թատերախումբը հիմնադրվել է երիտասարդ դերասանների կողմից՝ նպատակ ունենալով ներկայացնել ժամանակակից և դասական թատրոնը նորովի:
-      Մենք հավատում ենք, որ թատրոնը ոչ միայն արվեստ է, այլև երկխոսություն հասարակության հետ՝ համարձակ, հոգեհուզական ու իմաստավոր:
-    </p>
-    <button onclick="toggleDetails()">Իմանալ Ավելին</button>
+  <section class="container" id="about">
+    <div class="about">
+      <h2>Մեր մասին</h2>
+      <p>
+        Գյումրու Երիտասարդական Թատերախումբը հիմնադրվել է երիտասարդ դերասանների կողմից՝ նպատակ ունենալով ներկայացնել
+        ժամանակակից և դասական թատրոնը նորովի:
+        Մենք հավատում ենք, որ թատրոնը ոչ միայն արվեստ է, այլև երկխոսություն հասարակության հետ՝ համարձակ, հոգեհուզական ու
+        իմաստավոր:
+      </p>
+      <button onclick="toggleDetails()">Իմանալ Ավելին</button>
+    </div>
+
   </section>
-  
+
   <!-- Մոդալ պատուհան -->
   <div id="aboutModal" class="amodal">
-    <div class="modal-content">
+    <div class="modal-content" id="innerModal">
       <span class="close" onclick="toggleDetails()"><img src="images/close.png" alt=""></span>
       <h3>Մեր մասին՝ մանրամասն</h3>
       <img src="images/group_foto.jpg" alt="" class="aboutFoto" width="400px" height="400px">
@@ -86,14 +92,14 @@
       <img src="images/group_foto.jpg" alt="" class="aboutFoto" width="400px" height="400px">
       <img src="images/group_foto.jpg" alt="" class="aboutFoto" width="400px" height="400px">
       <img src="images/group_foto.jpg" alt="" class="aboutFoto" width="400px" height="400px">
-    
+
       <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, nemo.։
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, nemo.։
       </p>
     </div>
   </div>
   <footer id="contact">
-    <div class="footer-container" id="contact" >
+    <div class="footer-container" id="contact">
       <div class="footer-about">
         <h3>Մեր մասին</h3>
         <p>Գյումրու երիտասարդական թատերախումբը հիմնադրվել է ...</p>
@@ -118,17 +124,18 @@
         <a href="https://www.instagram.com/gyumri_youth_theater_troupe?igsh=YzdmeHVoemhmeHFs" target="_blank">
           Instagram
         </a>
-        
-        <a href="https://www.facebook.com/GyumriYouthTheaterGroup?rdid=zQUHLBR0m096U9Er&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ErY7EnbZf%2F#">Facebook</a>
+
+        <a
+          href="https://www.facebook.com/GyumriYouthTheaterGroup?rdid=zQUHLBR0m096U9Er&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ErY7EnbZf%2F#">Facebook</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 Gyumri Youth Theater | Բոլոր իրավունքները պաշտպանված են</p>
     </div>
   </footer>
-  
-  
- 
+
+
+
 
   <script src="script.js"></script>
 </body>

@@ -35,38 +35,50 @@ body {
   background-color: #f9f9f9;
 }
 
-a {
+nav a {
   display: inline-block;
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
   color: white;
+  font-size: 16px;
 }
 
-a:hover {
+nav a:hover {
   background: linear-gradient(135deg, #3a423d, #27302b, #1b1d1b);
-  transform: scale(1.1); 
   border-radius: 8px;
   padding: 5px;
   box-shadow: 0 0 12px rgba(58, 66, 61, 0.5);
+  letter-spacing: 1px;
+  font-size: 18px;
 }
 
 
 a:focus {
-  outline: 2px solid transparent; 
-  outline-offset: 2px; 
-  border: 2px solid #3a423d;  
-  box-shadow: 0 0 8px rgba(58, 66, 61, 0.6); 
-  transition: all 0.3s ease;  
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border: 2px solid #3a423d;
+  box-shadow: 0 0 8px rgba(58, 66, 61, 0.6);
+  transition: all 0.3s ease;
 }
 
 /* porc */
-#main {
+/* #main {
   height: 700px;
   width: 1240px;
   position: relative;
   overflow: hidden;
   padding-top: 10px;
   margin: 0 auto;
+} */
+#main {
+  width: 100%;
+  max-width: 1240px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  padding-top: 10px;
+  margin: 0 auto;
 }
+
 
 #hovers {
   position: absolute;
@@ -129,6 +141,7 @@ a:focus {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .language {
@@ -210,7 +223,7 @@ nav ul {
 .show-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* (auto-fit, minmax(250px, 1fr)); */
+  /* grid-template-columns: (auto-fit, minmax(250px, 2fr)); */
   gap: 20px;
   justify-items: center;
 }
@@ -238,12 +251,10 @@ nav ul {
   outline: 2px solid var(--yellow);
 }
 
-
-
-
 .show-card img {
+  height: auto;
+  max-height: 300px;
   width: 100%;
-  height: 300px;
   object-fit: contain;
   background: var(--gradient-contrast);
   transition: opacity 0.3s ease;
@@ -429,33 +440,44 @@ button.info-toggle:hover {
   border-radius: 15px;
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 1.6;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: var(--gradient-soft);
+    background-color: #272727;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+
+  }
+
+  button:hover {
+    background: none;
+    background-color: #040504;
+  }
 }
 
-.about h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  text-align: center;
-}
 
-.about p {
-  font-size: 22px;
-  line-height: 1.6;
-}
 
-.about button {
-  margin-top: 10px;
-  padding: 8px 14px;
-  background: var(--gradient-soft);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-}
 
-.about button:hover {
-  background-color: #040504;
-}
+
+
+
 
 .amodal {
   display: none;
@@ -475,9 +497,7 @@ button.info-toggle:hover {
   padding: 20px;
   width: 80%;
   max-height: 80vh;
-  /* սահմանում է առավելագույն տեսանելի բարձրությունը */
   overflow-y: auto;
-  /* ակտիվացնում է ուղղահայաց սքրոլը, եթե պարունակությունը շատ է */
   border-radius: 10px;
 }
 
@@ -502,6 +522,7 @@ footer {
   color: #040504;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 .footer-container {
@@ -511,7 +532,8 @@ footer {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .footer-container>div {
@@ -590,9 +612,56 @@ footer {
 
 }
 
+@media (max-width: 788px) {
+  nav ul {
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+
+  }
+
+  header.container img {
+    width: 30px;
+    height: 30px;
+  }
+
+  header.container {
+    display: flex;
+    gap: 20px;
+    padding: 18px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .show-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .show-card img {
+    height: auto;
+    max-height: 300px;
+    width: 100%;
+    background: var(--gradient-contrast);
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .footer-container>div {
+    flex: 1 1 45%;
+  }
+}
 
 
-@media (max-width: 600px) {
+
+
+@media (max-width: 650px) {
   nav#nav-menu {
     display: none;
     width: 100%;
@@ -606,6 +675,7 @@ footer {
   }
 
   nav#nav-menu ul {
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -624,4 +694,45 @@ footer {
   .language {
     display: none;
   }
+
+  footer {
+    background: var(--gradient-contrast);
+    color: #040504;
+    padding: 10px 5px;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-container {
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .footer-container h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+
+  .footer-container p,
+  .footer-container a,
+  .footer-container li {
+    font-size: 11px;
+    line-height: 1.3;
+    color: #ccc;
+    text-decoration: none;
+  }
+
+}
+
+@media (max-width: 460px) {
+  .footer-container {
+    gap: 15px;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+
 }
